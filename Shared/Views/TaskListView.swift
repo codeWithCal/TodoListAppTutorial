@@ -29,7 +29,7 @@ struct TaskListView: View {
                     {
                         ForEach(filteredTaskItems())
                         { taskItem in
-                            NavigationLink(destination: TaskEditView(passedTaskItem: taskItem, initialDate: taskItem.dueDate)
+                            NavigationLink(destination: TaskEditView(passedTaskItem: taskItem, initialDate: taskItem.dueDate!)
                                 .environmentObject(dateHolder))
                             {
                                 TaskCell(passedTaskItem: taskItem)
